@@ -14,6 +14,11 @@ export default function HeroBackground() {
 
     (async () => {
       const THREE: any = await import("three");
+      const testCanvas = document.createElement("canvas");
+      const hasGL = !!(
+        testCanvas.getContext("webgl2") || testCanvas.getContext("webgl")
+      );
+      if (!hasGL || !isMounted || !containerRef.current) return;
 
       if (!isMounted || !containerRef.current) return;
 
@@ -299,7 +304,11 @@ export default function HeroBackground() {
         camera = new THREE.OrthographicCamera(0, worldWidth, worldHeight, 0, 1, 1000);
         camera.position.z = 1;
 
-        renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        try {
+          renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        } catch {
+          return;
+        }
         renderer.setSize(width, height);
         renderer.setPixelRatio(window.devicePixelRatio);
         renderer.domElement.style.position = "absolute";

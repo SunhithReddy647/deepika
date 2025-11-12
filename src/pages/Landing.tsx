@@ -27,14 +27,7 @@ export default function Landing() {
         </div>
         <div className="flex items-center justify-center">
           <Loader className="h-8 w-8 animate-spin mr-4" />
-          <a
-            href="https://vly.ai"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary underline hover:text-primary/80 transition-colors"
-          >
-            vly.ai
-          </a>&nbsp; is generating your project...
+          Loading your project...
         </div>
         </div>
       </div>
