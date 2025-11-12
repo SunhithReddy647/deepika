@@ -249,7 +249,7 @@ export default function Home() {
                 Hello! I'm <span style={{ color: '#8B5E3C' }}>Deepika</span>, creating content that's thoughtful, fun, and meant to inspire.
               </h1>
               <p className="text-xl mb-6 text-black font-bold">
-                I create scroll-stopping UGC that converts viewers into customers. 
+                I will create scroll-stopping UGC that converts viewers into customers. 
                 Let's make your brand go viral! 🚀
               </p>
               <div className="flex flex-wrap gap-4">
