@@ -13,8 +13,7 @@ export default function HeroBackground() {
     let isMounted = true;
 
     (async () => {
-      // Dynamically import three from CDN to avoid adding a new dependency.
-      const THREE: any = await import("https://esm.sh/three");
+      const THREE: any = await import("three");
 
       if (!isMounted || !containerRef.current) return;
 

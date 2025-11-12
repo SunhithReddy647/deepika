@@ -26,7 +26,7 @@ function Auth({ redirectAfterAuth }: AuthProps = {}) {
   // Auth hook removed; provide local stubs to keep this page functional.
   const authLoading = false;
   const isAuthenticated = false;
-  const signIn = async (_provider: string, _formData: FormData) => {
+  const signIn = async (_provider: string, _formData?: FormData) => {
     // simulate async auth request
     await new Promise((resolve) => setTimeout(resolve, 300));
   };
