@@ -1,0 +1,289 @@
+/* FONT IMPORTS GO HERE */
+@import url("https://fonts.googleapis.com/css2?family=Ballet&family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;500;600;700&family=Emilys+Candy&family=Fleur+De+Leah&family=Quintessential&display=swap");
+
+
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHANGE VALUES FOR THEME */
+:root {
+  --radius: 0.625rem;
+  --background: #FFF1E6;
+  --foreground: oklch(0 0 0);
+  --card: #F0EFEB;
+  --card-foreground: oklch(0 0 0);
+  --popover: #F0EFEB;
+  --popover-foreground: oklch(0 0 0);
+  --primary: #FAD2E1;
+  --primary-foreground: oklch(0 0 0);
+  --secondary: #E2ECE9;
+  --secondary-foreground: oklch(0.2 0 0);
+  --muted: #EAE4E9;
+  --muted-foreground: oklch(0.4 0 0);
+  --accent: #DFE7FD;
+  --accent-foreground: oklch(0.2 0 0);
+  --destructive: #FDE2E4;
+  --border: oklch(0 0 0);
+  --input: oklch(0 0 0);
+  --ring: #FAD2E1;
+  --chart-1: #FDE2E4;
+  --chart-2: #BEE1E6;
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: #F0EFEB;
+  --sidebar-foreground: oklch(0 0 0);
+  --sidebar-primary: #FAD2E1;
+  --sidebar-primary-foreground: oklch(0 0 0);
+  --sidebar-accent: #E2ECE9;
+  --sidebar-accent-foreground: oklch(0.2 0 0);
+  --sidebar-border: oklch(0 0 0);
+  --sidebar-ring: #FAD2E1;
+  --hearts-tile: 64px; /* heart tile spacing size for global background */
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@layer base {
+  /* Logo wordmark */
+  .logo-font {
+    font-family: "Ballet", cursive;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 1;
+  }
+
+  /* Headings */
+  h1 {
+    font-family: "Quintessential", cursive;
+    letter-spacing: 0.5px;
+  }
+  h2,
+  h3 {
+    font-family: "Quintessential", cursive;
+    letter-spacing: 0.5px;
+  }
+  h4,
+  h5,
+  h6 {
+    font-family: "Quintessential", cursive;
+    letter-spacing: 0.4px;
+  }
+
+  /* Body readability enhancements */
+  body {
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Emilys Candy", system-ui, sans-serif;
+    font-size: 19px;
+    position: relative; /* for global hearts pseudo-element layering */
+  }
+}
+
+/* Marquee animations for Brands section */
+@keyframes marquee-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee {
+  animation: marquee-x 33.6s linear infinite;
+}
+
+.marquee-fast {
+  animation-duration: 26.4s;
+}
+
+.marquee-slow {
+  animation-duration: 43.2s;
+}
+
+.marquee-reverse {
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee,
+  .marquee-fast,
+  .marquee-slow {
+    animation: none !important;
+  }
+}
+
+/* Disable global hearts overlay so hearts are attached per-section (not entire page) */
+body::before {
+  content: "";
+  position: fixed; /* cover viewport and feel continuous */
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'><g transform='translate(32,32) scale(0.35) translate(-12,-12)'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23f9c5d1'/></g></svg>");
+  background-repeat: repeat;
+  background-size: var(--hearts-tile) var(--hearts-tile);
+  background-position: center top;
+  opacity: 0.7; /* clearer but still soft and cute */
+  pointer-events: none;
+  z-index: 2; /* below stars/content; above section backgrounds */
+  display: none; /* disable global overlay */
+}
+
+/* Disable old per-section hearts overlay to avoid doubling */
+.section-dots::after {
+  content: "" !important;
+  position: absolute;        /* ensure it renders over the section background */
+  inset: 0;                  /* cover the entire section */
+  background-repeat: repeat; /* tile across the section */
+  background-position: center top;
+  /* existing background-image and background-size kept as-is */
+  opacity: 0.7;
+  pointer-events: none;      /* not interactive */
+  z-index: 2;                /* below content (z=3) and stars (z=4), above background */
+}
+
+/* Responsive tile sizing to keep spacing consistent */
+@media (min-width: 768px) {
+  :root { --hearts-tile: 72px; }
+}
+@media (min-width: 1024px) {
+  :root { --hearts-tile: 80px; }
+}
+
+/* Heart pattern overlay for sections (beneath content, above background) */
+.section-dots {
+  position: relative;
+  --hearts-size: 56px;
+}
+.section-dots::after {
+  content: "" !important;
+
+  /* Use soft pink hearts for section backgrounds */
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24'><g transform='translate(9,9) scale(0.125)'><path d='M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.41 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.41 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z' fill='%23f9c5d1'/></g></svg>");
+
+  /* Match global spacing (tiny heart centered in larger tile) */
+  background-size: var(--hearts-tile) var(--hearts-tile);
+
+  /* Make hearts clearly visible yet soft */
+  opacity: 0.49;
+
+  /* Sit above section backgrounds, below stars/content */
+  z-index: 2;
+}
+/* Ensure content appears above the hearts overlay */
+.section-dots > * {
+  position: relative;
+  z-index: 3;
+}
+
+/* Responsive spacing for heart tiles */
+@media (min-width: 768px) {
+  .section-dots { --hearts-size: 72px; }
+}
+@media (min-width: 1024px) {
+  .section-dots { --hearts-size: 96px; }
+}
+
+/* Ensure flower separator sits above hearts but below content */
+.flower-separators {
+  position: relative;
+}
+.flower-separators::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 32px;                 /* doubled height */
+  width: 100%;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='64' height='32' viewBox='0 0 64 32'><text x='32' y='16' text-anchor='middle' dominant-baseline='central' font-size='24' fill='%23FAD2E1' stroke='%23000' stroke-width='2'>&#10048;</text></svg>");
+  background-repeat: repeat-x;
+  background-size: 64px 32px;   /* doubled size */
+  pointer-events: none;
+  z-index: 4; /* just below content; above backgrounds */
+}
+/* Ensure content appears above the separator */
+.flower-separators > * {
+  position: relative;
+  z-index: 6; /* raised from 3 */
+}
